@@ -1,0 +1,49 @@
+
+  /* Boostrap Buttons Styling */
+
+  .btn-primary {
+    /* font-family: Raleway-SemiBold; */
+    font-size: 15px;
+    color: rgba(58, 133, 191, 0.75);
+    letter-spacing: 1px;
+    line-height: 15px;
+    border: 2px solid rgba(58, 133, 191, 0.75);
+    border-radius: 50px;
+    background: transparent;
+    transition: all 0.3s ease 0s;
+    width:50%;
+    height:70%;
+
+  }
+  
+  .btn-primary:hover {
+    color: #FFF;
+    background: rgba(58, 133, 191, 0.75);
+    border: 2px solid rgba(58, 133, 191, 0.75);
+  }
+
+  .space {
+    height: 0.5px;
+    width: auto;
+    display: inline-block;
+  }
+
+  .iconspace{
+
+    height: 2px;
+    width: auto;
+    display: inline-block;
+
+  }
+
+  div span {
+    display: inline-block;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+  .pointer {
+    cursor: pointer;
+  }
+.clickable-row:hover {
+    background: #fafafa;
+  }

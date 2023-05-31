@@ -1,0 +1,17 @@
+.container{
+    
+  justify-content: center;
+  align-items: center;
+}
+
+#input{ 
+    flex-basis: 100%;
+    min-width: 0;
+}
+
+.header{
+    margin-top: 20px;
+}
+.form-group{
+  margin-top: 20px;
+}

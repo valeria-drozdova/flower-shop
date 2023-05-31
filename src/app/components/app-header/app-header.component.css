@@ -1,0 +1,29 @@
+
+.space {
+    height: auto;
+    width: 2px;
+    display: inline-block;
+  }
+
+  .menu-btn {
+		position: absolute;
+		z-index: 3;
+		right: 35px;
+		top: 35px;
+		cursor: pointer;
+		transition: all 0.5s ease-out;
+	}
+
+
+	.menu-btn .btn-line {
+		width: 28px;
+		height: 3px;
+		margin: 0 0 5px 0;
+		background: black;
+		transition: all 0.5s ease-out;
+	}
+
+
+    h1{
+		display: inline-block;
+	}
