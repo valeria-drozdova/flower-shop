@@ -1,0 +1,44 @@
+.form-group{
+    position:relative;
+    
+}
+
+.fa-calendar{
+    position:absolute;
+    right:10px;
+    top:11px;
+    z-index:999;
+
+}
+
+.space {
+    height: 10px;
+    width: auto;
+    display: inline-block;
+  }
+
+  .options-label{
+    border-radius: 25px;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 15px;
+    line-height: 48px;
+    overflow: hidden;
+  }
+
+  .options-label .price{
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 48px;
+    padding-left: 10px; 
+  }
+
+  .options-label {
+    border: 1px solid #3e65b9;
+  }
+.clickable {
+    cursor: pointer;
+  }
+

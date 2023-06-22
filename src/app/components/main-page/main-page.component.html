@@ -39,160 +39,37 @@
     </div>
 </div>
 </div> 
-
-<!-- Flowers cards -->
 <div class="container">
-<div class="row">
-<div class="col-lg-6">
-<div class="card">
-  <div class="row g-0">
-    <div class="col-6 col-md-5 position-relative">
-      <img src="assets/images/flowers.jpg" class="card-img fit-cover rounded-start w-100 h-100">
-    </div>
-    <div class="col-6 col-md-6">
-      <div class="card-body">
-        <h5 class="card-title">
-          <a class="link-dark text-decoration-none" href="#" target="_blank">Card
-        Title</a>
-        </h5>
-        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <div class="cta-section">
-          <div>$15.00</div>
-          <div><button [routerLink]="['/item']" type="button" class="btn btn-dark" >
-            <i class="bi bi-cart"></i>
-            Buy now
-          </button>
-          </div>
+<div class="row card-group">
+  <div class="col-sm-6" *ngFor="let flower of flowers">
+    <div class="card"  style="width: 35rem;">
+      <div class="row">
+        <div class="col-6">
+          <img src={{flower.imgUrl}} class="card-img fit-cover rounded-start">
         </div>
-    
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-<div class="col-lg-6">
-  <div class="card">
-    <div class="row g-0">
-      <div class="col-6 col-md-5 position-relative">
-        <img src="assets/images/flowers1.jpg" class="card-img fit-cover rounded-start w-100 h-100">
-      </div>
-      <div class="col-6 col-md-6">
-        <div class="card-body">
-          <h5 class="card-title">
-            <a class="link-dark text-decoration-none" href="#" target="_blank">Card
-          Title</a>
-          </h5>
-          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <div class="cta-section">
-            <div>$129.00</div>
-            <div><button type="button" class="btn btn-dark">
-              <i class="bi bi-cart"></i>
-              Buy now
-            </button>
-            </div>
-          </div>
-      
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div> 
-<div class="space"></div>
-<div class="row">
-<div class="col-lg-6">
-  <div class="card">
-    <div class="row g-0">
-      <div class="col-6 col-md-5 position-relative">
-        <img src="assets/images/flowers.jpg" class="card-img fit-cover rounded-start w-100 h-100">
-      </div>
-      <div class="col-6 col-md-6">
-        <div class="card-body">
-          <h5 class="card-title">
-            <a class="link-dark text-decoration-none" href="#" target="_blank">Card
-          Title</a>
-          </h5>
-          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <div class="cta-section">
-            <div>$129.00</div>
-            <div><button type="button" class="btn btn-dark">
-              <i class="bi bi-cart"></i>
-              Buy now
-            </button>
-            </div>
-          </div>
-      
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="col-lg-6">
-  <div class="card">
-    <div class="row g-0">
-      <div class="col-6 col-md-5 position-relative">
-        <img src="assets/images/flowers1.jpg" class="card-img fit-cover rounded-start w-100 h-100">
-      </div>
-      <div class="col-6 col-md-6">
-        <div class="card-body">
-          <h5 class="card-title">
-            <a class="link-dark text-decoration-none" href="#" target="_blank">Card
-          Title</a>
-          </h5>
-          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <div class="cta-section">
-            <div>$129.00</div>
-            <div><button type="button" class="btn btn-dark">
-              <i class="bi bi-cart"></i>
-              Buy now
-            </button>
-            </div>
-          </div>
-      
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-</div>
-<!-- ---------------------------------- -->
-  <!-- <div class="row">
-    <div class="col-6">
-      <div class="position-relative h-100 py-5">
-        <img class="img-fluid" style="object-fit: cover" src="https://www.justukr.com/files/uploads/lavanda.jpg" >
-      </div>
-    </div>
-    <div class="col-6">
-      <form class="py-5">
-        
-          <h2>Order bouquet online!</h2>
-          <div class="container d-flex">
-             <div class="row"> -->
-              <!-- <div class="col-6">
-                <div class="form-group">
-                        <div class="input-icons">
-                        <i class="fa fa-calendar"></i>
-                          <div class="input-group date" id="datepicker">
-                            <input type="text" class="form-control" id="date" placeholder="Choose the Date"/>
-                            </div>
-                      </div>
-                  </div>
-                  </div> -->
-                  <!-- <div class="col-6">
-              <div class="container ">
-                <div class="search">
-                  <i class="fas fa-location-dot"></i>
-                  <input class="form-control" type="text" placeholder="Find Your location">
-                </div>
+        <div class="col-6">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a class="link-dark text-decoration-none" href="#" target="_blank">{{flower.title}}</a>
+            </h5>
+            <p class="card-text">{{flower.description}}</p>
+            <div class="cta-section">
+              <div>${{flower.price}}</div>
+              <div><button routerLink="/item/{{flower.id}}" type="button" class="btn btn-dark">
+                <i class="bi bi-cart"></i>
+                Buy now
+              </button>
               </div>
-            </div> -->
-            <!-- </div> -->
-          <!-- </div>
-      </form>
+            </div>
+          </div>
+      </div>
     </div>
-  </div> --> 
-
+  </div>
+</div>
+</div>
+<div class="space"></div>
+</div>
 </body>
 </html>
+
 
