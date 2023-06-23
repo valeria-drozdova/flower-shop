@@ -13,13 +13,14 @@
   <div *ngIf="flower">
     <h2>{{flower.title}}</h2>
     <div class="row">
-      <div class="col-7">
+      <div class="col-md-6">
         <img src={{flower.imgUrl}} class="card-img">
       </div>
-      <div class="col-5">
+      <div class="col-md-6">
         <div class="container">
           <span>Choose the size:</span>
         <br>
+        <div class="space"></div>
           <label class="options-label clickable relative">
             <span class="options-label-text">
               <span class="name">Standard</span>
@@ -30,7 +31,10 @@
           <label class="options-label clickable relative">
             <span class="options-label-text">
               <span class="name">Medium</span>
-              <span class="price">40$</span>
+              <span class="price">40$ </span>
+              <span class="sticker absolute block">
+                <span class="sticker-text block">Best Seller</span>
+              </span> 
             </span>
           </label>
           <div class="space"></div>
@@ -40,7 +44,15 @@
               <span class="price">60$</span>
             </span>
           </label>
+          <br>
+          <div class="space"></div>
+          <span>Choose the Date:</span>
+          <div class="space"></div>
+          <br>
+          <input type="date" name="date" id="date">
+
       </div>
+     
       </div>
   </div>
   </div>
