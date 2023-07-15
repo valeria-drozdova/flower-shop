@@ -5,9 +5,6 @@ import { ItemComponent } from '../item/item.component';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import axios, {isCancel, AxiosError} from 'axios';
-import { FlowerSchema } from 'flowershop-backend/src/flowers/schemas/flower.schema';
-
-
 
 @Component({
   selector: 'app-main-page',
