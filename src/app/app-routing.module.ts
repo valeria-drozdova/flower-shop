@@ -5,11 +5,12 @@ import { ProductsComponent } from './components/products/products.component';
 import { IntroComponent } from './components/main-page/main-page.component';
 import { ItemComponent } from './components/item/item.component';
 
+
 const routes: Routes = [
 
 	{ path: 'login', component: LoginComponent},
   {path:'products', component: ProductsComponent},
-  {path:'item/:id', component:ItemComponent},
+  {path:'item/:ids', component:ItemComponent},
   {path:'**', component: IntroComponent},
   
 

@@ -1,8 +1,13 @@
 import { Component } from '@angular/core';
 import { Router } from "@angular/router";
 import { Flower } from 'src/app/models/flower';
-import { FLOWERS } from 'src/app/mock-flowers';
 import { ItemComponent } from '../item/item.component';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import axios, {isCancel, AxiosError} from 'axios';
+import { FlowerSchema } from 'flowershop-backend/src/flowers/schemas/flower.schema';
+
+
 
 @Component({
   selector: 'app-main-page',
@@ -11,10 +16,11 @@ import { ItemComponent } from '../item/item.component';
 })
 export class IntroComponent{
 
-  flowers = FLOWERS;
-
-  constructor(private router: Router){
+  constructor(private router: Router, private httpClient: HttpClient){
+    this.flowers = [];
   }
+
+flowers!: any[]; 
 
   navigate() { 
     this.router.navigate(['/item']); 
@@ -23,5 +29,22 @@ export class IntroComponent{
   Hello(){
     this.router.navigate(['/item']); 
   }
+  async getFlowers() {
+    
+    try {
+      const response = await axios.get('http://localhost:3000/flowers');
+      this.flowers=response.data;
+      console.log(this.flowers);
+    } catch (error) {
+      console.error(error);
+    }
+
+  }
+
+  ngOnInit() {
+    this.getFlowers();
+    
+  }
+  
 
 }

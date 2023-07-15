@@ -19,8 +19,7 @@ import { AppHeaderComponent } from './components/app-header/app-header.component
 import { IntroComponent } from './components/main-page/main-page.component';
 import { AccountDialogComponent } from './components/account-dialog/account-dialog.component';
 import { ItemComponent } from './components/item/item.component';
-
-
+import { CommonModule } from '@angular/common'
 
 @NgModule({
   declarations: [
@@ -45,7 +44,8 @@ import { ItemComponent } from './components/item/item.component';
 	MatFormFieldModule,
 	MatNativeDateModule,
 	HttpClientModule,
-	MatInputModule
+	MatInputModule,
+  CommonModule
 
   ],
   providers: [AppRoutingModule],
