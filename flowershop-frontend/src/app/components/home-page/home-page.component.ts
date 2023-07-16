@@ -1,17 +1,14 @@
 import { Component } from '@angular/core';
 import { Router } from "@angular/router";
-import { Flower } from 'src/app/models/flower';
-import { ItemComponent } from '../item/item.component';
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import axios, {isCancel, AxiosError} from 'axios';
 
 @Component({
-  selector: 'app-main-page',
-  templateUrl: './main-page.component.html',
-  styleUrls: ['./main-page.component.css']
+  selector: 'app-home-page',
+  templateUrl: './home-page.component.html',
+  styleUrls: ['./home-page.component.css']
 })
-export class IntroComponent{
+export class HomePageComponent{
 
   constructor(private router: Router, private httpClient: HttpClient){
     this.flowers = [];

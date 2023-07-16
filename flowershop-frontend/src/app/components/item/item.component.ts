@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from "@angular/router";
-import { IntroComponent } from '../main-page/main-page.component';
+import { HomePageComponent } from '../home-page/home-page.component';
 import { Flower } from 'src/app/models/flower';
 /* import { FlowerService } from 'src/app/_services/item.service'; */
 import axios, {isCancel, AxiosError} from 'axios';
@@ -33,7 +33,7 @@ flower!: any;
   }
 
   async getFlower() {
-    const id = String(this.route.snapshot.paramMap.get('ids'));
+    const id = String(this.route.snapshot.paramMap.get('id'));
     return this.getFlowerById(id);
 
   }

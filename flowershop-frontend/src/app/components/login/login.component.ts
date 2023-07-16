@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormBuilder, AbstractControl } from '@angular/forms';
-import {NgbModal, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
-import { MatDialog } from '@angular/material/dialog';
-/* import Validation from '../../utils/validation';
- */
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

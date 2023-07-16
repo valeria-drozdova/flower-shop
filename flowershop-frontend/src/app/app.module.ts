@@ -14,10 +14,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {HttpClientModule} from '@angular/common/http';
 import {MatInputModule} from '@angular/material/input';
 import { RegisterComponent } from './components/register/register.component';
-import { ProductsComponent } from './components/products/products.component';
 import { AppHeaderComponent } from './components/app-header/app-header.component';
-import { IntroComponent } from './components/main-page/main-page.component';
-import { AccountDialogComponent } from './components/account-dialog/account-dialog.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
+import { HeaderMenuComponent } from './components/header-menu/header-menu.component';
 import { ItemComponent } from './components/item/item.component';
 import { CommonModule } from '@angular/common'
 
@@ -26,10 +25,9 @@ import { CommonModule } from '@angular/common'
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    ProductsComponent,
     AppHeaderComponent,
-    IntroComponent,
-    AccountDialogComponent,
+    HomePageComponent,
+    HeaderMenuComponent,
     ItemComponent,
 	
   ],

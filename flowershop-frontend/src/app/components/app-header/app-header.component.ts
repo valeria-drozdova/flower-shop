@@ -1,13 +1,8 @@
 import { Component, Input, OnInit, EventEmitter, Output  } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
-import { LoginComponent } from '../login/login.component';
-import { RegisterComponent } from '../register/register.component';
-import { AccountDialogComponent } from '../account-dialog/account-dialog.component';
-import { ProductsComponent } from '../products/products.component';
+import { HeaderMenuComponent } from '../header-menu/header-menu.component';
 import { MatDialog, MatDialogConfig, MatDialogRef  } from '@angular/material/dialog';
-import {FormControl} from '@angular/forms';
-
 
 
 @Component({
@@ -25,7 +20,7 @@ export class AppHeaderComponent implements OnInit{
   }
 
   openMenu() {
-    this.dialogRef.open(AccountDialogComponent,{
+    this.dialogRef.open(HeaderMenuComponent,{
   
       height: '600px',
       width: '600px', 
@@ -33,28 +28,5 @@ export class AppHeaderComponent implements OnInit{
     );
     
   }
-
-  openLoginDialog(){
-	
-    this.dialogRef.open(LoginComponent,{
-  
-      height: '600px',
-      width: '600px', 
-    }
-    );
-    }
-  
-    openRegisterDialog(){
-    
-      this.dialogRef.open(RegisterComponent,{
-  
-        height: '600px',
-        width: '600px', 
-      });
-      }
-
-      navigate() { 
-        this.router.navigate(['/item']); 
-      } 
 
 }
