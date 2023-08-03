@@ -3,7 +3,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 import { LoginComponent } from '../login/login.component';
 import { RegisterComponent } from '../register/register.component';
-import { MatDialog} from '@angular/material/dialog';
+import { MatDialog, MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'header-menu',
@@ -13,6 +13,7 @@ import { MatDialog} from '@angular/material/dialog';
 export class HeaderMenuComponent {
 
   constructor(private modalService: NgbModal, private router: Router, private dialogRef : MatDialog, ) {
+    
   }
 
   closeModal(){
@@ -25,6 +26,7 @@ export class HeaderMenuComponent {
   
       height: '600px',
       width: '600px', 
+      disableClose:true,
     }
     );
     }
@@ -35,6 +37,7 @@ export class HeaderMenuComponent {
   
         height: '600px',
         width: '600px', 
+        disableClose:true,
       });
       }
 

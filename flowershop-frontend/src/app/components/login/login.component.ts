@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormBuilder, AbstractControl } from '@angular/forms';
+import { MatDialog, MatDialogRef} from '@angular/material/dialog';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -16,7 +18,7 @@ export class LoginComponent implements OnInit{
   });
   submitted = false;
   
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder, private router: Router, private dialogRef : MatDialog) {}
 
   ngOnInit(): void {
     this.form = this.formBuilder.group(
@@ -44,6 +46,9 @@ export class LoginComponent implements OnInit{
     
   }
 
+  closeModal():void{
+    this.router.navigate(['../']); 
+  }
 
 
 }

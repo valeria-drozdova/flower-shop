@@ -24,6 +24,7 @@ export class AppHeaderComponent implements OnInit{
   
       height: '600px',
       width: '600px', 
+      disableClose:true,
     }
     );
     

@@ -1,6 +1,12 @@
 
 <div class="container">
+	<div class="position-relative">
     	<h2 class="header">  Login</h2>
+		<div class="position-absolute top-0 end-0">
+			<!-- <button type="button" class="btn-close" aria-label="Close" (click) ="closeModal()"></button> -->
+			<button type="button" class="btn-close" matDialogClose></button>
+		</div>
+	</div>
  <div class="login-form">
 	<form [formGroup]="form" (ngSubmit)="onSubmit()">
 	  <div class="form-group">
