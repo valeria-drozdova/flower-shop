@@ -20,9 +20,6 @@ flowers!: any[];
     this.router.navigate(['/item']); 
   } 
 
-  Hello(){
-    this.router.navigate(['/item']); 
-  }
   async getFlowers() {
     
     try {

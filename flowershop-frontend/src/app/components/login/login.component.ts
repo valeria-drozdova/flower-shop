@@ -46,9 +46,4 @@ export class LoginComponent implements OnInit{
     
   }
 
-  closeModal():void{
-    this.router.navigate(['../']); 
-  }
-
-
 }
